@@ -1,8 +1,8 @@
 :root {
-    --bg-color: #e9ecef;
-    --text-color: #112237;
-    --accent: #213E60;
-    --light-accent: #F4F2EF;
+    --bg-color: #f2f2f2;
+    --text-color: #9f3004;;
+    --accent: #FA4C08;
+    --light-accent: #ffffffba;
 }
 h1,
 h2,
@@ -35,6 +35,7 @@ img {
 body {
     font-family: 'Rubik', sans-serif;
     background-color: var(--bg-color);
+    background-size: 100%;
     color: var(--text-color);
     margin: 0;
 }
@@ -42,12 +43,10 @@ body {
     width: 100%;
     padding: 20px 0;
     margin: 0 auto;
-    background-image: url(./image/bg-min.jpg);
-    background-size: 100%;
 }
-.section-one {
+.section {
     width: 100%;
-    height: 100vh;
+    padding: 20px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -63,47 +62,72 @@ body {
     line-height: 1.1;
     margin: 0 auto;
     color: var(--accent);
-    padding: 50px 0;
+    padding: 20px 0;
 }
 .title-descr {
     color: var(--text-color);
     background-color: var(--light-accent);
-    width: 336px;
+    width: 100%;
     font-size: 15px;
+    letter-spacing: 1.5px;
     padding: 4px;
-    border: 1.5px solid var(--accent);
     border-radius: 5px;
-    box-shadow: -1px 0px 11px 3px #94a1aebd;
+    box-shadow: -1px 0px 11px 3px #94a1ae69;
+    margin: 0 auto;
+}
+span {
+    color: var(--accent);
 }
 .bold {
     font-weight: 700;
 }
-
+.title-two {
+    margin: 0 auto;
+    color: var(--accent);
+    padding: 20px 0;
+}
 
 /* -----------------------------media------------------------------------------- */
 @media screen and (min-width: 375px) {
-    .section-one {
+    .section {
         width: 375px;
     }
     .title {
-        font-size: 32px;
+        font-size: 28px;
+    }
+    .title-descr {
+        width: 336px;
     }
 }
 @media screen and (min-width: 768px) {
     .container {
-        padding: 50px 0;
+        padding: 25px 0;
     }
-    .section-one {
+    .section {
             width: 768px;
     }
-    .descr-paragraphs {
+    .title {
+        font-size: 48px;
+        padding: 35px 0;
+    }
+    .title-descr {
+        width: 638px;
+        font-size: 18px;
+        padding: 8px;
     }
 }
 @media screen and (min-width: 1280px) {
     .container {
-        padding: 100px 0;
+        padding: 30px 0;
     }
-    .section-one {
+    .section {
             width: 1220px;
+    }
+    .title {
+        font-size: 64px;
+    }
+    .title-descr {
+        width: 1115px;
+        font-size: 21px;
     }
 }
