@@ -31,11 +31,11 @@ img {
     display: block;
     max-width: 100%;
     height: auto;
+    border-radius: 5px;
 }
 body {
     font-family: 'Rubik', sans-serif;
     background-color: var(--bg-color);
-    background-size: 100%;
     color: var(--text-color);
     margin: 0;
 }
@@ -50,6 +50,8 @@ body {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
 }
 .descr-paragraphs {
     display: flex;
@@ -69,7 +71,7 @@ body {
     background-color: var(--light-accent);
     width: 100%;
     font-size: 15px;
-    letter-spacing: 1.5px;
+    letter-spacing: 0.02em;
     padding: 4px;
     border-radius: 5px;
     box-shadow: -1px 0px 11px 3px #94a1ae69;
@@ -88,12 +90,63 @@ span {
     padding: 20px 0;
 }
 
-
-
+.section-three {
+}
+caption {
+    font-size: 16px;
+}
+table {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+tbody {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px 0;
+    border: 2px solid var(--accent);
+    border-radius: 5px;
+}
+.types-img {
+    width: 196px;
+    height: 153px;
+}
+tr {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 2px solid var(--accent);
+    padding: 10px;
+}
+tr:last-child {
+    border-bottom: none;
+}
+ul {
+    padding: 20px;
+}
+a {
+    color: var(--accent);
+    padding: 5px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+}
+a:hover, a:focus {
+    color: var(--bg-color);
+    border-color: var(--accent);
+    background-color: var(--accent);
+    transition-duration: 1500ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.section-four {
+    gap: 25px;
+}
 .list-descr {
     display: flex;
     gap: 30px;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
     margin-bottom: 30px;
@@ -101,7 +154,6 @@ span {
 .list-descr:last-child {
     margin-bottom: 0;
 }
-
 .title-three {
     display: flex;
     color: var(--accent);
@@ -120,10 +172,12 @@ span {
 li::marker {
     color: var(--accent);
     font-weight: bold;
+    margin-right: 1px;
 }
 li {
     font-size: 15px;
-    letter-spacing: 1.5px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
     text-align: start;
 }
 /* -----------------------------media------------------------------------------- */
@@ -157,11 +211,32 @@ li {
     .title-three {
         font-size: 18px;
     }
+    caption {
+    font-size: 18px;
+    }
+    tbody {
+        gap: 40px;
+    }
+    tr {
+        flex-direction: row;
+        gap: 40px;
+    }
+    .geipel-img {
+        width: 458px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        box-shadow: -1px 0px 11px 3px #94a1ae69;
+        border-radius: 5px;
+    }
     .list {
         gap: 25px;
     }
+    .two-list {
+        display: flex;
+        gap: 30px;
+    }
     li {
-        font-size: 18px;
+        font-size: 17px;
     }
 }
 @media screen and (min-width: 1280px) {
@@ -176,9 +251,17 @@ li {
     }
     .title-descr {
         width: 1115px;
-        font-size: 21px;
     }
-    li {
-        font-size: 21px;
+    .title-two {
+        font-size: 32px;
+    }
+    .title-three {
+        font-size: 28px;
+    }
+    caption {
+    font-size: 28px;
+    }
+    tbody {
+        gap: 50px;
     }
 }
