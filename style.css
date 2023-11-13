@@ -74,6 +74,7 @@ body {
     border-radius: 5px;
     box-shadow: -1px 0px 11px 3px #94a1ae69;
     margin: 0 auto;
+    text-align: center;
 }
 span {
     color: var(--accent);
@@ -87,6 +88,44 @@ span {
     padding: 20px 0;
 }
 
+
+
+.list-descr {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+.list-descr:last-child {
+    margin-bottom: 0;
+}
+
+.title-three {
+    display: flex;
+    color: var(--accent);
+    padding: 20px;
+    border-radius: 5px;
+    background-color: var(--light-accent);
+    box-shadow: -1px 0px 11px 3px #94a1ae69;
+}
+.list {
+    text-decoration: var(--accent);
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+li::marker {
+    color: var(--accent);
+    font-weight: bold;
+}
+li {
+    font-size: 15px;
+    letter-spacing: 1.5px;
+    text-align: start;
+}
 /* -----------------------------media------------------------------------------- */
 @media screen and (min-width: 375px) {
     .section {
@@ -115,6 +154,15 @@ span {
         font-size: 18px;
         padding: 8px;
     }
+    .title-three {
+        font-size: 18px;
+    }
+    .list {
+        gap: 25px;
+    }
+    li {
+        font-size: 18px;
+    }
 }
 @media screen and (min-width: 1280px) {
     .container {
@@ -128,6 +176,9 @@ span {
     }
     .title-descr {
         width: 1115px;
+        font-size: 21px;
+    }
+    li {
         font-size: 21px;
     }
 }
