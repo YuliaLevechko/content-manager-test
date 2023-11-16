@@ -50,8 +50,6 @@ body {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    border-top: 1px solid white;
-    border-bottom: 1px solid white;
 }
 .descr-paragraphs {
     display: flex;
@@ -68,15 +66,12 @@ body {
 }
 .title-descr {
     color: var(--text-color);
-    background-color: var(--light-accent);
     width: 100%;
     font-size: 15px;
+    line-height: 1.5;
     letter-spacing: 0.02em;
     padding: 4px;
-    border-radius: 5px;
-    box-shadow: -1px 0px 11px 3px #94a1ae69;
     margin: 0 auto;
-    text-align: center;
 }
 span {
     color: var(--accent);
@@ -88,11 +83,20 @@ span {
     margin: 0 auto;
     color: var(--accent);
     padding: 20px 0;
+    width: 100%;
+}
+.subtitle {
+    margin: 0 auto;
+    color: var(--accent);
+    padding: 20px 0;
+    font-size: 18px;
 }
 caption {
+    display: flex;
     font-size: 16px;
 }
 table {
+    width: 100%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -101,29 +105,31 @@ table {
 tbody {
     display: flex;
     flex-direction: column;
-    gap: 30px;
-    padding: 20px 0;
-    border: 2px solid var(--accent);
+    border: 3px solid var(--accent);
     border-radius: 5px;
 }
 .types-img {
     width: 196px;
-    height: 153px;
 }
 tr {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     text-align: center;
     flex-direction: column;
     align-items: center;
-    border-bottom: 2px solid var(--accent);
-    padding: 10px;
+    border-bottom: 3px solid var(--accent);
 }
 tr:last-child {
     border-bottom: none;
 }
+td {
+    padding: 10px 0;
+}
 ul {
-    padding: 20px;
+    padding: 10px 30px;
+}
+.perforation-image {
+    padding: 10px 20px;
 }
 a {
     color: var(--accent);
@@ -141,10 +147,16 @@ a:hover, a:focus {
 .section-four {
     gap: 25px;
 }
+.title-center {
+    justify-content: center;
+    display: flex;
+}
+.geipel-img {
+    margin-bottom: 20px;
+}
 .list-descr {
     display: flex;
     gap: 30px;
-    align-items: center;
     flex-direction: column;
     margin-bottom: 30px;
 }
@@ -152,12 +164,10 @@ a:hover, a:focus {
     margin-bottom: 0;
 }
 .title-three {
-    display: flex;
     color: var(--accent);
-    padding: 20px;
-    border-radius: 5px;
-    background-color: var(--light-accent);
-    box-shadow: -1px 0px 11px 3px #94a1ae69;
+}
+.subtitle-center {
+    align-items: center;
 }
 .list {
     text-decoration: var(--accent);
@@ -188,6 +198,12 @@ li {
     .title-descr {
         width: 336px;
     }
+    .title-two {
+        width: 336px;
+    }
+    table {
+        width: 336px;
+    }
 }
 @media screen and (min-width: 768px) {
     .container {
@@ -205,23 +221,38 @@ li {
         font-size: 18px;
         padding: 8px;
     }
+    .title-two {
+        width: 638px;
+    }
+    .subtitle {
+        font-size: 20px;
+    }
     .title-three {
         font-size: 18px;
     }
+    table {
+        width: 638px;
+    }
     caption {
     font-size: 18px;
-    }
-    tbody {
-        gap: 40px;
     }
     tr {
         flex-direction: row;
         gap: 40px;
     }
+    ul {
+        padding: 40px;
+    }
+    .subtitle-center {
+        align-items: start;
+    }
+    .perforation-descr {
+        border-left: 2px solid var(--accent);
+        border-top: none;
+    }
     .geipel-img {
-        width: 458px;
         margin: 0 auto;
-        margin-bottom: 20px;
+        margin-bottom: 0;
         box-shadow: -1px 0px 11px 3px #94a1ae69;
         border-radius: 5px;
     }
@@ -232,33 +263,41 @@ li {
         display: flex;
         gap: 30px;
     }
-    li {
-        font-size: 17px;
-    }
 }
 @media screen and (min-width: 1280px) {
     .container {
         padding: 30px 0;
     }
     .section {
-            width: 1220px;
+            width: 1115px;
     }
     .title {
         font-size: 64px;
     }
     .title-descr {
         width: 1115px;
+        font-size: 21px;
     }
     .title-two {
         font-size: 32px;
+        width: 1115px;
+    }
+    .subtitle {
+        font-size: 28px;
     }
     .title-three {
         font-size: 28px;
     }
-    caption {
-    font-size: 28px;
+    table {
+        width: 1115px;
     }
-    tbody {
-        gap: 50px;
+    caption {
+    font-size: 24px;
+    }
+    .last-img {
+        width: 201px;
+    }
+    li {
+        font-size: 21px;
     }
 }
